@@ -1,0 +1,23 @@
+using System;
+
+public class MyBaseClass
+{
+    public int MyProperty { get; set; }
+}
+public class DerivedClass : MyBaseClass
+{
+    public void AccessProperty()
+    {
+        Console.WriteLine($"Value of MyProperty from DerivedClass: {MyProperty}");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        DerivedClass derivedObj = new DerivedClass();
+        derivedObj.MyProperty = 42;
+        derivedObj.AccessProperty();
+    }
+}
