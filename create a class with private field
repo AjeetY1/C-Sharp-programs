@@ -1,0 +1,27 @@
+using System;
+
+class MyClass
+{
+    private int privateField;
+
+    public void SetPrivateField(int value)
+    {
+        privateField = value;
+    }
+
+    public int GetPrivateField()
+    {
+        return privateField;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        MyClass obj = new MyClass();
+        obj.SetPrivateField(42);
+        int value = obj.GetPrivateField();
+        Console.WriteLine(value); // Output: 42
+    }
+}
